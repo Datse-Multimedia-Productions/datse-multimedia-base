@@ -4,7 +4,7 @@
  *
  * Displays a "Not Found" message and a search form when a 404 Error is encountered.
  *
- * @package Thematic
+ * @package Datse Multimedia Base
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Creating_an_Error_404_Page Codex: Create a 404 Page
