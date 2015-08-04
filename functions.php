@@ -10,7 +10,7 @@
  *
  * Reference:  {@link http://codex.wordpress.org/Child_Themes Codex: Child Themes}
  * 
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage ThemeInit
  */
 

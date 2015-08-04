@@ -7,7 +7,7 @@
  * Thematic Action Hooks: thematic_abovefooter thematic_belowfooter thematic_after
  * Thematic Filters: thematic_close_wrapper can be used to remove the closing of the #wrapper div
  * 
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  */
 ?>
