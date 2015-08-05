@@ -9,7 +9,7 @@
  * your Page Attributes: Template to use the template named "Archives"
  * on the WP-Admin Edit Page screen.
  *
- * @package Thematic
+ * @package Datse Mulitmedia Base 
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Template_Hierarchy Codex: Template Hierarchy

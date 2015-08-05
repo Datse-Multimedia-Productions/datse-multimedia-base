@@ -4,7 +4,7 @@
  *
  * …
  * 
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  */
  

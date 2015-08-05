@@ -4,7 +4,7 @@
  *
  * Displays an archive index of posts assigned to a Category. 
  *
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Category_Templates Codex: Category Templates

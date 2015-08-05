@@ -5,7 +5,7 @@
  * Displays an Archive index of post-type items. Other more specific archive templates 
  * may override the display of this template for example the category.php.
  *
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Template_Hierarchy Codex: Template Hierarchy

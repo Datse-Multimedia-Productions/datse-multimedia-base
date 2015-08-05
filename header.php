@@ -5,7 +5,7 @@
  * This template calls a series of functions that output the head tag of the document.
  * The body and div #main elements are opened at the end of this file. 
  * 
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  */
  

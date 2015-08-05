@@ -9,7 +9,7 @@
  * 
  * WP Codex Reference: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  */
 

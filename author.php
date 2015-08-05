@@ -5,7 +5,7 @@
  * Displays an archive index of posts by a singular Author. 
  * It can display a micrformatted vCard for Author if option is selcted in the default Theme Options.
  *
- * @package Thematic
+ * @package Datse Mulitmedia Base 
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Author_Templates Codex:Author Templates
