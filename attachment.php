@@ -4,7 +4,7 @@
  *
  * Displays singular WordPress Media Library items.
  *
- * @package Thematic
+ * @package Datse Mulitmedia Base 
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Using_Image_and_File_Attachments Codex:Using Attachments

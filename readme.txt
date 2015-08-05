@@ -1,5 +1,5 @@
-=== Thematic ===
-Contributors: iandstewart, chrisgossmann, emhr, helgatheviking, middlesister
+==== Datse Multimedia Base ====
+Contributors: JigmeDatse, iandstewart, chrisgossmann, emhr, helgatheviking, middlesister
 Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
 Requires at least: 3.4
 Tested up to: 3.6
@@ -9,7 +9,7 @@ The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress The
 
 == Description ==
 
-Thematic is a free, open-source, highly extensible, search-engine optimized WordPress Theme Framework featuring 13 widget-ready areas, grid-based layout samples, styling for popular plugins, and a whole community behind it. It's perfect for beginner bloggers and WordPress development professionals.
+Datse Multimedia Base is a free, open-source, highly extensible, search-engine optimized WordPress Theme Framework featuring 13 widget-ready areas, grid-based layout samples, styling for popular plugins, and a whole community behind it. It's perfect for beginner bloggers and WordPress development professionals.
 
 Features:
 
@@ -27,7 +27,16 @@ Features:
 * Editable footer text to remove the theme credit without harming the theme
 * Options for multi-author blogs
 
-== Changelog ==
+=== Changelog ===
+==Datse Multimeida Base==
+= 0.0.1 =
+Changed Thematic references to Datse Multimedia Base
+
+= 0.0.0 = 
+Forked from Thematic 1.0.4
+
+
+==Thematic==
 = 1.0.4 =
 * Removed: Backward compatibility for WP versions earlier than 3.4 specifically all calls to wp_get_theme() and get_theme_data()
 * Deprecated: thematic_legacy_help() & thematic_do_legacy_help_section()

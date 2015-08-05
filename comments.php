@@ -4,7 +4,7 @@
  *
  * Lists the comments and displays the comments form. 
  * 
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  *
  * @todo chase the invalid counts & pagination for comments/trackbacks

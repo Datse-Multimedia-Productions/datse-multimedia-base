@@ -5,7 +5,7 @@
  * This Full Width template removes the primary and secondary asides so that content
  * can be displayed the entire width of the #content area.
  * 
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  */
 

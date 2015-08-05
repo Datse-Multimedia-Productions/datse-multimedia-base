@@ -13,7 +13,7 @@
  *
  * If you desire a different template for your blog page, create a home.php in a child theme.
  *
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  * @deprecated 1.0
  */

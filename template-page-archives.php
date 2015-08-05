@@ -6,7 +6,7 @@
  * It will display the page content above an unordered list of the different 
  * post-type archives nested with an unordered list of thier post-type items.
  *
- * @package Thematic
+ * @package Datse Multimedia Base 
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Creating_an_Archive_Index Codex: Creating an Archives Index
