@@ -259,7 +259,7 @@ function thematic_comment_form_args( $post_id = null ) {
  */
 function thematic_commenter_link() {
 	$commenter = get_comment_author_link();
-	if ( ereg( '<a[^>]* class=[^>]+>', $commenter ) ) {
+	if ( preg_match( '/<a[^>]* class=[^>]+>/', $commenter ) ) {
 		$commenter = ereg_replace( '(<a[^>]* class=[\'"]?)', '\\1url ' , $commenter );
 	} else {
 		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
