@@ -31,8 +31,8 @@ function thematic_shortcode_framework_link() {
     $theme_name = $my_theme->get("Name");
     $theme_uri = $my_theme->get("ThemeURI");
     if ($theme_parent = $my_theme->parent()) {
-	$parent_name = $theme_parent->get("Name);
-	$parent_uri = $theme_parent->get("ThemeURI);
+	$parent_name = $theme_parent->get("Name");
+	$parent_uri = $theme_parent->get("ThemeURI");
     }
     $themelink = '<a class="theme-link" href="'.$theme_uri.'" title="'.$theme_name.'" rel="home">.'$theme_name.'</a>';
     if ($parent_name) {
