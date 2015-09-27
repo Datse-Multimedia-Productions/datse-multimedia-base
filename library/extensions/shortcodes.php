@@ -36,11 +36,11 @@ function thematic_shortcode_framework_link( $atts ) {
     $my_theme = wp_get_theme();
     $theme_name = $my_theme->get("Name");
     $theme_uri = $my_theme->get("ThemeURI");
-    $themelink = '<a class="theme-link" href="'.$theme_uri.'" title="'.$theme_name.'" rel="home">'.$theme_name.'</a>';
+    $themelink = '<a class="theme-link" href="'.$theme_uri.'" title="'.$theme_name.'" rel="home">'.$theme_name.'</a> theme';
     if (isset($a['parent']) && $a['parent']=='true' && $theme_parent = $my_theme->parent()) {
 	$parent_name = $theme_parent->get("Name");
 	$parent_uri = $theme_parent->get("ThemeURI");
-        $themelink .= 'a child theme of <a class="theme-link" href="'.$parent_uri.'" title="'.$parent_name.'" rel="home">'.$parent_name.'</a>';
+        $themelink .= ' a child theme of <a class="theme-link" href="'.$parent_uri.'" title="'.$parent_name.'" rel="home">'.$parent_name.'</a>';
     }
     return apply_filters('thematic_theme_link',$themelink);
 }
