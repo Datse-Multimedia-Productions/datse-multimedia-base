@@ -27,7 +27,17 @@ add_shortcode('wp-link', 'thematic_shortcode_wp_link');
  * Display link to Thematic.
  */
 function thematic_shortcode_framework_link() {
-    $themelink = '<a class="theme-link" href="http://thematictheme.com" title="Thematic Theme Framework" rel="home">Thematic Theme Framework</a>';
+    $my_theme = wp_get_theme();
+    $theme_name = $my_theme->get("Name");
+    $theme_uri = $my_theme->get("ThemeURI");
+    if ($theme_parent = $my_theme->parent()) {
+	$parent_name = $theme_parent->get("Name);
+	$parent_uri = $theme_parent->get("ThemeURI);
+    }
+    $themelink = '<a class="theme-link" href="'.$theme_uri.'" title="'.$theme_name.'" rel="home">.'$theme_name.'</a>';
+    if ($parent_name) {
+        $themelink .= 'a child theme of <a class="theme-link" href="'.$parent_uri.'" title="'.$parent_name.'" rel="home">.'$parent_name.'</a>';
+    }
     return apply_filters('thematic_theme_link',$themelink);
 }
 add_shortcode('theme-link', 'thematic_shortcode_framework_link');	
