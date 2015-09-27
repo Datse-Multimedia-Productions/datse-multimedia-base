@@ -36,7 +36,7 @@ function thematic_shortcode_framework_link() {
     }
     $themelink = '<a class="theme-link" href="'.$theme_uri.'" title="'.$theme_name.'" rel="home">'.$theme_name.'</a>';
     if ($parent_name) {
-        $themelink .= 'a child theme of <a class="theme-link" href="'.$parent_uri.'" title="'.$parent_name.'" rel="home">.'$parent_name.'</a>';
+        $themelink .= 'a child theme of <a class="theme-link" href="'.$parent_uri.'" title="'.$parent_name.'" rel="home">'.$parent_name.'</a>';
     }
     return apply_filters('thematic_theme_link',$themelink);
 }
