@@ -28,7 +28,7 @@ add_shortcode('wp-link', 'thematic_shortcode_wp_link');
  */
 function thematic_shortcode_framework_link( $atts ) {
 
-    $a = shorcode_atts ( array(
+    $a = shortcode_atts ( array(
         'parent' => 'true'
     ), $atts);
 
