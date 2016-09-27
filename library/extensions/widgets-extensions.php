@@ -421,7 +421,7 @@ function thematic_secondary_aside() {
 	// WordPress 3.4
 	} elseif ( method_exists ( $wp_customize,'is_preview' ) && $wp_customize->is_preview()  ){ 
 		echo thematic_before_widget_area( 'secondary-aside' );
-		the_widget('Thematic_Widget_RSS', null, $args);
+		the_widget('Thematic_Widget_RSSlinks', null, $args);
 		the_widget('Thematic_Widget_Meta', null, $args); 
 		echo thematic_after_widget_area( 'secondary-aside' );
 	}
