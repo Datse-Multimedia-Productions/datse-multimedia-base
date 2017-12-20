@@ -53,7 +53,7 @@ class Thematic_Widget_Search extends WP_Widget {
 
 	function Thematic_Widget_Search() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
-		$this->WP_Widget('search', __('Search', 'datse-multimedia-base'), $widget_ops);
+		$this->__construct('search', __('Search', 'datse-multimedia-base'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
@@ -98,7 +98,7 @@ class Thematic_Widget_Meta extends WP_Widget {
 
 	function Thematic_Widget_Meta() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'datse-multimedia-base') );
-		$this->WP_Widget('meta', __('Meta', 'datse-multimedia-base'), $widget_ops);
+		$this->__construct('meta', __('Meta', 'datse-multimedia-base'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
@@ -143,7 +143,7 @@ class Thematic_Widget_RSSlinks extends WP_Widget {
 
 	function Thematic_Widget_RSSlinks() {
 		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'datse-multimedia-base') );
-		$this->WP_Widget( 'rss-links', __('RSS Links', 'datse-multimedia-base'), $widget_ops);
+		$this->__construct( 'rss-links', __('RSS Links', 'datse-multimedia-base'), $widget_ops);
 	}
 
 	function widget($args, $instance) {
