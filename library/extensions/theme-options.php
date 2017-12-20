@@ -197,12 +197,11 @@ if (function_exists('childtheme_override_opt_page_help')) {
 	function thematic_opt_page_help() {	
 		
 		$screen = get_current_screen();
+
+		$theme = wp_get_theme();
 		
 		$sidebar  = '<p><strong>' . __( 'For more information:', 'datse-multimedia-base') . '</strong></p>';
-		$sidebar .= '<a href="http://thematictheme.com">ThematicTheme.com</a></p>';
-		$sidebar .= '<p><strong>' . __('For support:', 'datse-multimedia-base') . '</strong></p>';
-		$sidebar .= '<a href="http://thematictheme.com/forums/"> Thematic ';
-		$sidebar .= __('forums', 'datse-multimedia-base' ) . '</a></p>';
+		$sidebar .= '<a href='. $theme=>get('ThemeURI') . '">'. $theme=>get('Name') .'</a> </p>';
 		
 		$sidebar = apply_filters ( 'thematic_theme_opt_help_sidebar', $sidebar );
 		
