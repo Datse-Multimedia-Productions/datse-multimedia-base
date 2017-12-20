@@ -30,7 +30,7 @@
 					if ( post_password_required() ) :
 				?>
 	
-					<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'thematic') ?></div>
+					<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'datse-multimedia-base') ?></div>
 				
 				</div><!-- #comments -->
 	

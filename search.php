@@ -53,11 +53,11 @@
 
 				<div id="post-0" class="post noresults">
 					
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'thematic' ) ?></h1>
+					<h1 class="entry-title"><?php _e( 'Nothing Found', 'datse-multimedia-base' ) ?></h1>
 					
 					<div class="entry-content">
 						
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'thematic' ) ?></p>
+						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'datse-multimedia-base' ) ?></p>
 					
 					</div><!-- .entry-content -->
 					

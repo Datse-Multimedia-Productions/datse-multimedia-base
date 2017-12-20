@@ -34,7 +34,7 @@ function thematic_comments($comment, $args, $depth) {
     			<?php  
     				if ( $comment->comment_approved == '0' ) {
     					echo "\t\t\t\t\t" . '<span class="unapproved">';
-    					_e( 'Your comment is awaiting moderation', 'thematic' );
+    					_e( 'Your comment is awaiting moderation', 'datse-multimedia-base' );
     					echo ".</span>\n";
     				}
     			?>
@@ -87,7 +87,7 @@ function thematic_pings($comment, $args, $depth) {
     			<?php 
     				if ($comment->comment_approved == '0') {
     				echo "\t\t\t\t\t" . '<span class="unapproved">';
-    					_e( 'Your trackback is awaiting moderation', 'thematic' );
+    					_e( 'Your trackback is awaiting moderation', 'datse-multimedia-base' );
     					
     				echo ".</span>\n";
     				}

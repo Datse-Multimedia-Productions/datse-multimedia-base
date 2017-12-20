@@ -1201,7 +1201,7 @@ if (function_exists('childtheme_override_category_archives'))  {
 	 */
 	function thematic_category_archives() { ?>
 				<li id="category-archives" class="content-column">
-					<h2><?php _e('Archives by Category', 'thematic') ?></h2>
+					<h2><?php _e('Archives by Category', 'datse-multimedia-base') ?></h2>
 					<ul>
 						<?php wp_list_categories( array ( 'feed' => 'RSS',
 														  'title_li' => '',
@@ -1232,7 +1232,7 @@ if (function_exists('childtheme_override_monthly_archives'))  {
 	 */
 	function thematic_monthly_archives() { ?>
 				<li id="monthly-archives" class="content-column">
-					<h2><?php _e('Archives by Month', 'thematic') ?></h2>
+					<h2><?php _e('Archives by Month', 'datse-multimedia-base') ?></h2>
 					<ul>
 						<?php wp_get_archives(array('type' => 'monthly',
 													'show_post_count' => true )); ?>
@@ -1293,7 +1293,7 @@ if ( function_exists('childtheme_override_404_content') )  {
   			<?php thematic_postheader(); ?>
   			
 			<div class="entry-content">
-				<p><?php _e( 'Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', 'thematic' ) ?></p>
+				<p><?php _e( 'Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', 'datse-multimedia-base' ) ?></p>
 			</div><!-- .entry-content -->
 			
 			<form id="error404-searchform" method="get" action="<?php echo home_url(); ?>/">
