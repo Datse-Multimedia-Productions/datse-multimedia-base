@@ -63,7 +63,8 @@ if ( function_exists('childtheme_override_doctitle') )  {
 	 */
 	function thematic_doctitle() {
         $separator = apply_filters('thematic_doctitle_separator', '|');
-        $doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
+        //$doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
+        $doctitle = wp_title( $separator, false, 'right' );
         echo $doctitle;
 	} // end thematic_doctitle
 }
