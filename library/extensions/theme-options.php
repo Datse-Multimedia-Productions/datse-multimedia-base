@@ -225,7 +225,6 @@ if (function_exists('childtheme_override_opt_page_help')) {
 function thematic_do_opt_page() { ?>
 
  <div class="wrap">
-	<?php screen_icon(); ?>
 
 	<?php 
 		$frameworkData = wp_get_theme();
