@@ -269,7 +269,7 @@ function thematic_do_opt_section_main() {
  */
 function thematic_do_insert_opt() { 
 ?>
-	<input type="text" maxlength="4" size="4" value="<?php esc_attr_e( (thematic_get_theme_opt('index_insert') ) ) ;  ?>" id="thm_insert_position" name="thematic_theme_opt[index_insert]">
+	<input type="text" maxlength="4" size="4" value="<?php esc_attr_e( (thematic_get_theme_opt('index_insert') ), 'datse-multimedia-base' ) ;  ?>" id="thm_insert_position" name="thematic_theme_opt[index_insert]">
 	<label for="thm_insert_position"><?php _e('The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature.','thematic'); ?></label>
 <?php 
 }

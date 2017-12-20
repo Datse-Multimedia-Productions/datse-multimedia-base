@@ -1299,7 +1299,7 @@ if ( function_exists('childtheme_override_404_content') )  {
 			<form id="error404-searchform" method="get" action="<?php echo home_url(); ?>/">
 				<div>
 					<input id="error404-s" name="s" type="text" value="<?php the_search_query(); ?>" size="40" />
-					<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php esc_attr_e( 'Find', 'thematic' ); ?>" />
+					<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php esc_attr_e( 'Find', 'datse-multimedia-base' ); ?>" />
 				</div>
 			</form>
 <?php }
