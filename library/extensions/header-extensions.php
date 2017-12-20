@@ -46,28 +46,6 @@ function thematic_create_contenttype() {
 }
 
 
-if ( function_exists('childtheme_override_doctitle') )  {
-	/**
-	 * @ignore
-	 */
-	 function thematic_doctitle() {
-    	childtheme_override_doctitle();
-    }
-} else {
-	/**
-	 * Display the content of the title tag
-	 * 
-	 * Override: childtheme_override_doctitle
-	 * Filter: thematic_doctitle_separator
-	 *
-	 */
-	function thematic_doctitle() {
-        $separator = apply_filters('thematic_doctitle_separator', '|');
-        //$doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
-        //$doctitle = wp_title( $separator, false, 'right' );
-        echo $doctitle;
-	} // end thematic_doctitle
-}
 
 	
 /**
