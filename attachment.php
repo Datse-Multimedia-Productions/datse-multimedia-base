@@ -51,7 +51,7 @@
 	                        <?php 
 	                        	the_content( thematic_more_text() );
 
-	                        	wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'thematic' ) . '&after=</div>' );
+	                        	wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'datse-multimedia-base' ) . '&after=</div>' );
 	                        ?>
 
 					</div><!-- .entry-content -->

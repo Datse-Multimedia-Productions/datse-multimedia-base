@@ -331,12 +331,12 @@ if (function_exists('childtheme_override_page_title'))  {
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
 				$author = get_the_author_meta( 'display_name', $post->post_author );
-				$content .= __('Author Archives:', 'thematic');
+				$content .= __('Author Archives:', 'datse-multimedia-base');
 				$content .= ' <span>' . $author .'</span>';
 				$content .= '</h1>';
 		} elseif (is_category()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Category Archives:', 'thematic');
+				$content .= __('Category Archives:', 'datse-multimedia-base');
 				$content .= ' <span>' . single_cat_title('', FALSE) .'</span>';
 				$content .= '</h1>' . "\n";
 				$content .= "\n\t\t\t\t" . '<div class="archive-meta">';
@@ -344,12 +344,12 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '</div>';
 		} elseif (is_search()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Search Results for:', 'thematic');
+				$content .= __('Search Results for:', 'datse-multimedia-base');
 				$content .= ' <span id="search-terms">' . get_search_query() .'</span>';
 				$content .= '</h1>';
 		} elseif (is_tag()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Tag Archives:', 'thematic');
+				$content .= __('Tag Archives:', 'datse-multimedia-base');
 				$content .= ' <span>';
 				$content .= single_tag_title( '', false );
 				$content .= '</span></h1>';
@@ -358,27 +358,27 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '<h1 class="page-title">';
 				$tax = get_taxonomy($taxonomy);
 				$content .= $tax->labels->singular_name . ' ';
-				$content .= __('Archives:', 'thematic');
+				$content .= __('Archives:', 'datse-multimedia-base');
 				$content .= ' <span>' . thematic_get_term_name() .'</span>';
 				$content .= '</h1>';
  		} elseif (is_post_type_archive()) { 
 				$content .= '<h1 class="page-title">';
 				$post_type_obj = get_post_type_object( get_post_type() );
 				$post_type_name = $post_type_obj->labels->singular_name;
-				$content .= __('Archives:', 'thematic');
+				$content .= __('Archives:', 'datse-multimedia-base');
 				$content .= ' <span>' . $post_type_name . '</span>';
 				$content .= '</h1>';	
 		} elseif (is_day()) {
 				$content .= '<h1 class="page-title">';
-				$content .= sprintf( __('Daily Archives: %s', 'thematic'), '<span>' . get_the_time( get_option('date_format') ) ) . '</span>';
+				$content .= sprintf( __('Daily Archives: %s', 'datse-multimedia-base'), '<span>' . get_the_time( get_option('date_format') ) ) . '</span>';
 				$content .= '</h1>';
 		} elseif (is_month()) {
 				$content .= '<h1 class="page-title">';
-				$content .= sprintf( __('Monthly Archives: %s', 'thematic') , '<span>' . get_the_time('F Y') ) . '</span>';
+				$content .= sprintf( __('Monthly Archives: %s', 'datse-multimedia-base') , '<span>' . get_the_time('F Y') ) . '</span>';
 				$content .= '</h1>';
 		} elseif (is_year()) {
 				$content .= '<h1 class="page-title">';
-				$content .= sprintf( __('Yearly Archives: %s', 'thematic'), '<span>' . get_the_time('Y') ) . '</span>';
+				$content .= sprintf( __('Yearly Archives: %s', 'datse-multimedia-base'), '<span>' . get_the_time('Y') ) . '</span>';
 				$content .= '</h1>';
 		}
 		$content .= "\n";
@@ -421,9 +421,9 @@ if (function_exists('childtheme_override_nav_above'))  {
                 	<?php wp_pagenavi(); ?>
 					<?php } else { ?>
 					  
-					<div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+					<div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'datse-multimedia-base') ) ) ?></div>
 					
-					<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+					<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'datse-multimedia-base') ) ) ?></div>
 
 					<?php } ?>
 					
@@ -627,7 +627,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
+						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'datse-multimedia-base')),
 													'after' => '</div>')); ?>
 					
 					</div><!-- .entry-content -->
@@ -686,7 +686,7 @@ if (function_exists('childtheme_override_single_post'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
+						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'datse-multimedia-base')),
 													'after' => '</div>')); ?>
 						
 					</div><!-- .entry-content -->
@@ -885,9 +885,9 @@ if (function_exists('childtheme_override_postheader_posteditlink'))  {
     	$posteditlink = sprintf( '<a href="%s" title="%s" class="edit">%s</a>' , 
 
 			    			get_edit_post_link(),
-			    			esc_attr__('Edit post', 'thematic'),
+			    			esc_attr__('Edit post', 'datse-multimedia-base'),
 							/* translators: post edit link */
-			    			__('Edit', 'thematic'));
+			    			__('Edit', 'datse-multimedia-base'));
 		
 		return apply_filters('thematic_postheader_posteditlink', $posteditlink); 
 
@@ -918,12 +918,12 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	    if (is_single() || is_page()) {
 	        $posttitle .= '<h1 class="entry-title">' . $title_content . "</h1>\n";
 	    } elseif (is_404()) {    
-	        $posttitle .= '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
+	        $posttitle .= '<h1 class="entry-title">' . __('Not Found', 'datse-multimedia-base') . "</h1>\n";
 	    } else {
 	        $posttitle .= '<h2 class="entry-title">';
 	        $posttitle .= sprintf('<a href="%s" title="%s" rel="bookmark">%s</a>',
 	        						apply_filters('the_permalink', get_permalink()),
-									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
+									sprintf( esc_attr__('Permalink to %s', 'datse-multimedia-base'), the_title_attribute( 'echo=0' ) ),
 	        						$title_content
 	        						);   
 	        $posttitle .= "</h2>\n";
@@ -984,7 +984,7 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	function thematic_postmeta_authorlink() {
 		global $authordata;
 	
-	    $author_prep = '<span class="meta-prep meta-prep-author">' . __('By', 'thematic') . ' </span>';
+	    $author_prep = '<span class="meta-prep meta-prep-author">' . __('By', 'datse-multimedia-base') . ' </span>';
 	    
 	    if ( thematic_is_custom_post_type() && !current_theme_supports( 'thematic_support_post_type_author_link' ) ) {
 	    	$author_info  = '<span class="vcard"><span class="fn nickname">';
@@ -995,7 +995,7 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    	$author_info .= sprintf('<a class="url fn n" href="%s" title="%s">%s</a>',
 	    							get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
 									/* translators: author name */
-	    							sprintf( esc_attr__( 'View all posts by %s', 'thematic' ), get_the_author_meta( 'display_name' ) ),
+	    							sprintf( esc_attr__( 'View all posts by %s', 'datse-multimedia-base' ), get_the_author_meta( 'display_name' ) ),
 	    							get_the_author_meta( 'display_name' ));
 	    	$author_info .= '</span>';
 	    }
@@ -1024,7 +1024,7 @@ if (function_exists('childtheme_override_postmeta_entrydate'))  {
 	 */ 
 	function thematic_postmeta_entrydate() {
 	
-	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published:', 'thematic') . ' </span>';
+	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published:', 'datse-multimedia-base') . ' </span>';
 	    $entrydate .= '<span class="entry-date"><abbr class="published" title="';
 	    $entrydate .= get_the_time(thematic_time_title()) . '">';
 	    $entrydate .= get_the_time(thematic_time_display());
@@ -1142,11 +1142,11 @@ if (function_exists('childtheme_override_content'))  {
 			if ( apply_filters( 'thematic_post_thumbs', TRUE) ) {
 				$post_title = get_the_title();
 				$size = apply_filters( 'thematic_post_thumb_size' , array(100,100) );
-				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ) ) );
+				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> sprintf( esc_attr__('Permalink to %s', 'datse-multimedia-base'), the_title_attribute( 'echo=0' ) ) ) );
 				if ( has_post_thumbnail() ) {
 					$post = sprintf('<a class="entry-thumb" href="%s" title="%s">%s</a>',
 									get_permalink() ,
-									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
+									sprintf( esc_attr__('Permalink to %s', 'datse-multimedia-base'), the_title_attribute( 'echo=0' ) ),
 									get_the_post_thumbnail(get_the_ID(), $size, $attr)) . $post;
 					}
 			}
@@ -1318,7 +1318,7 @@ add_action( 'thematic_404','thematic_404_content' );
  */
 function thematic_more_text() {
 	/* translators: %s is right angle brackets */
-	$content = sprintf ( __('Read More %s', 'thematic'), ' <span class="meta-nav">&raquo;</span>');
+	$content = sprintf ( __('Read More %s', 'datse-multimedia-base'), ' <span class="meta-nav">&raquo;</span>');
 	return apply_filters('more_text', $content);
 } // end thematic_more_text
 
@@ -1370,15 +1370,15 @@ if (function_exists('childtheme_override_postfooter'))  {
 	        	if ( thematic_is_custom_post_type() && $post_type_obj->has_archive ) {
 		
 					/* translators: %s is custom post type singular name, wrapped in link tags */
-					$postfooter .= sprintf( __( 'Browse the %s archive.', 'thematic' ), 
+					$postfooter .= sprintf( __( 'Browse the %s archive.', 'datse-multimedia-base' ), 
 					/* translators: %s is custom post type singular name */
-					' <a href="' . $post_type_archive_link . '" title="' . sprintf( esc_attr__( 'Permalink to %s Archive', 'thematic' ), $post_type_obj->labels->singular_name )  . '">' . $post_type_obj->labels->singular_name . '</a>'
+					' <a href="' . $post_type_archive_link . '" title="' . sprintf( esc_attr__( 'Permalink to %s Archive', 'datse-multimedia-base' ), $post_type_obj->labels->singular_name )  . '">' . $post_type_obj->labels->singular_name . '</a>'
 					);
 					$postfooter .= ' ';
 
 	        	}
 	        	$postfooter .= thematic_postfooter_posttax();
-	    		$postfooter .= sprintf( _x('Bookmark the %1$spermalink%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a title="%s" href="%s">', sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ), apply_filters('the_permalink', get_permalink())) , '</a>') . ' ';
+	    		$postfooter .= sprintf( _x('Bookmark the %1$spermalink%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'datse-multimedia-base'), sprintf('<a title="%s" href="%s">', sprintf( esc_attr__('Permalink to %s', 'datse-multimedia-base'), the_title_attribute( 'echo=0' ) ), apply_filters('the_permalink', get_permalink())) , '</a>') . ' ';
 
 	    			if ( post_type_supports( $post_type, 'comments') ) {
 	            		$postfooter .= thematic_postfooter_postconnect();
@@ -1420,9 +1420,9 @@ if (function_exists('childtheme_override_postfooter_posteditlink'))  {
 
 	    $posteditlink = sprintf( '<a href="%s" title="%s" class="edit">%s</a>' , 
 			    			get_edit_post_link(),
-			    			esc_attr__('Edit post', 'thematic'),
+			    			esc_attr__('Edit post', 'datse-multimedia-base'),
 							/* translators: post edit link */
-			    			__('Edit', 'thematic'));
+			    			__('Edit', 'datse-multimedia-base'));
 
 
 	    return apply_filters('thematic_postfooter_posteditlink',$posteditlink); 
@@ -1536,7 +1536,7 @@ if (function_exists('childtheme_override_postfooter_postcategory'))  {
 	    $postcategory = "\n\n\t\t\t\t\t\t" . '<span class="cat-links">';
 	    if (is_single()) {
 			/* translators: %s is postfooter categories */
-	        $postcategory .= sprintf( __('This entry was posted in %s', 'thematic'), get_the_category_list(', ') );
+	        $postcategory .= sprintf( __('This entry was posted in %s', 'datse-multimedia-base'), get_the_category_list(', ') );
 	        $postcategory .= '</span>';
 	        $posttags = get_the_tags();
 			if ( !$posttags ) {
@@ -1547,11 +1547,11 @@ if (function_exists('childtheme_override_postfooter_postcategory'))  {
 
 	    } elseif ( is_category() && $cats_meow = thematic_cats_meow(', ') ) { /* Returns categories other than the one queried */
 			/* translators: %s is postfooter categories */
-	        $postcategory .= sprintf( __('Also posted in %s', 'thematic'), $cats_meow );
+	        $postcategory .= sprintf( __('Also posted in %s', 'datse-multimedia-base'), $cats_meow );
 	        $postcategory .= '</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-tag-links">|</span> ';
 	    } else {
 			/* translators: %s is postfooter categories */
-	        $postcategory .= sprintf( __('Posted in %s', 'thematic'), get_the_category_list(', ') );
+	        $postcategory .= sprintf( __('Posted in %s', 'datse-multimedia-base'), get_the_category_list(', ') );
 	        $postcategory .= '</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-tag-links">|</span> ';
 	    }
 	    return apply_filters('thematic_postfooter_postcategory',$postcategory); 
@@ -1577,15 +1577,15 @@ if (function_exists('childtheme_override_postfooter_posttags'))  {
 	function thematic_postfooter_posttags() {
 
 	    if ( is_single() && !is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-	        $tagtext = __('This entry is tagged', 'thematic') . ' ';
+	        $tagtext = __('This entry is tagged', 'datse-multimedia-base') . ' ';
 	        $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>. ');
 	    } elseif ( is_single() ) {
-	    	$tagtext = __('and tagged', 'thematic') . ' ';
+	    	$tagtext = __('and tagged', 'datse-multimedia-base') . ' ';
 	        $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>. ');
 	    } elseif ( is_tag() && $tag_ur_it = thematic_tag_ur_it(', ') ) { /* Returns tags other than the one queried */
-	        $posttags = '<span class="tag-links">' . __('Also tagged', 'thematic') . ' ' . $tag_ur_it . '</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-comments-link">|</span> ';
+	        $posttags = '<span class="tag-links">' . __('Also tagged', 'datse-multimedia-base') . ' ' . $tag_ur_it . '</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-comments-link">|</span> ';
 	    } else {
-	        $tagtext = __('Tagged', 'thematic') . ' ';
+	        $tagtext = __('Tagged', 'datse-multimedia-base') . ' ';
 	        $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-comments-link">|</span> ');
 	    }
 	    return apply_filters('thematic_postfooter_posttags',$posttags); 
@@ -1615,17 +1615,17 @@ if (function_exists('childtheme_override_postfooter_postcomments'))  {
 	        if ($postcommentnumber > '0') {
 	        	$postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
 	        						apply_filters('the_permalink', get_permalink()) . '#respond',
-	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
+	        						sprintf( esc_attr__('Comment on %s', 'datse-multimedia-base'), the_title_attribute( 'echo=0' ) ),
 									/* translators: number of comments and trackbacks */
 	        						sprintf( _n('%s Response', '%s Responses', $postcommentnumber, 'thematic'), number_format_i18n( $postcommentnumber ) ) );
 			} else {
 	            $postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
 	        						apply_filters('the_permalink', get_permalink()) . '#respond',
-	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
-	        						__('Leave a comment', 'thematic'));
+	        						sprintf( esc_attr__('Comment on %s', 'datse-multimedia-base'), the_title_attribute( 'echo=0' ) ),
+	        						__('Leave a comment', 'datse-multimedia-base'));
 	        }
 	    } else {
-	        $postcomments = '<span class="comments-link comments-closed-link">' . __('Comments closed', 'thematic') .'</span>';
+	        $postcomments = '<span class="comments-link comments-closed-link">' . __('Comments closed', 'datse-multimedia-base') .'</span>';
 	    }            
 	    return apply_filters('thematic_postfooter_postcomments',$postcomments); 
 	}
@@ -1650,24 +1650,24 @@ if (function_exists('childtheme_override_postfooter_postconnect'))  {
     
 	    if ((comments_open()) && (pings_open())) { /* Comments are open */
 	        $postconnect = sprintf( _x('%1$sPost a comment%2$s or leave a trackback: %3$s', '1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url.', 'thematic'), 
-								sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), 
+								sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'datse-multimedia-base')), 
 								'</a>' ,
 								sprintf('<a class="trackback-link" href="%s" title ="%s" rel="trackback">%s</a>.', 
 									get_trackback_url(),
-									esc_attr__('Trackback URL for your post', 'thematic'),
-						 			__('Trackback URL', 'thematic'))
+									esc_attr__('Trackback URL for your post', 'datse-multimedia-base'),
+						 			__('Trackback URL', 'datse-multimedia-base'))
 							);
 	    } elseif (!(comments_open()) && (pings_open())) { /* Only trackbacks are open */
 	        $postconnect = sprintf( _x('Comments are closed, but you can leave a trackback: %s', '%s is trackback url, wrapped in link tags', 'thematic'),
 							sprintf('<a class="trackback-link" href="%s" title="%s" rel="trackback">%s</a>.', 
 								get_trackback_url(), 
-								esc_attr__('Trackback URL for your post', 'thematic'), 
-								__('Trackback URL', 'thematic'))
+								esc_attr__('Trackback URL for your post', 'datse-multimedia-base'), 
+								__('Trackback URL', 'datse-multimedia-base'))
 							);
 	    } elseif ((comments_open()) && !(pings_open())) { /* Only comments open */
-	        $postconnect = sprintf( _x('Trackbacks are closed, but you can %1$spost a comment%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), '</a>');
+	        $postconnect = sprintf( _x('Trackbacks are closed, but you can %1$spost a comment%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'datse-multimedia-base'), sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'datse-multimedia-base')), '</a>');
 	    } elseif (!(comments_open()) && !(pings_open())) { /* Comments and trackbacks closed */
-	        $postconnect = __('Both comments and trackbacks are currently closed.', 'thematic');
+	        $postconnect = __('Both comments and trackbacks are currently closed.', 'datse-multimedia-base');
 	    }
 	    return apply_filters('thematic_postfooter_postconnect',$postconnect); 
 	}
@@ -1708,9 +1708,9 @@ if (function_exists('childtheme_override_nav_below'))  {
                 <?php wp_pagenavi(); ?>
                 <?php } else { ?>  
 				
-				<div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+				<div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'datse-multimedia-base') ) ) ?></div>
 					
-				<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+				<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'datse-multimedia-base') ) ) ?></div>
 
 				<?php } ?>
 			</div>	

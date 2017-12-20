@@ -49,7 +49,7 @@
     	                    
 						</ul>
     	                
-    	                <?php edit_post_link( __( 'Edit', 'thematic' ),'<span class="edit-link">','</span>' ); ?>
+    	                <?php edit_post_link( __( 'Edit', 'datse-multimedia-base' ),'<span class="edit-link">','</span>' ); ?>
 		
 					</div><!-- .entry-content -->
 					

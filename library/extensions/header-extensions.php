@@ -96,19 +96,19 @@ function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) {
       $content = single_post_title('', FALSE); 
     }
     elseif ( is_search() ) { 
-      $content = __('Search Results for:', 'thematic'); 
+      $content = __('Search Results for:', 'datse-multimedia-base'); 
       $content .= ' ' . get_search_query();
     }
     elseif ( is_category() ) {
-      $content = __('Category Archives:', 'thematic');
+      $content = __('Category Archives:', 'datse-multimedia-base');
       $content .= ' ' . single_cat_title('', FALSE);;
     }
     elseif ( is_tag() ) { 
-      $content = __('Tag Archives:', 'thematic');
+      $content = __('Tag Archives:', 'datse-multimedia-base');
       $content .= ' ' . thematic_tag_query();
     }
     elseif ( is_404() ) { 
-      $content = __('Not Found', 'thematic'); 
+      $content = __('Not Found', 'datse-multimedia-base'); 
     }
     else { 
       $content = get_bloginfo('description', 'display');
@@ -316,7 +316,7 @@ function thematic_show_rss() {
         $content .= get_feed_link( get_default_feed() );
         $content .= '" title="';
         $content .= esc_attr( get_bloginfo('name', 'display') );
-        $content .= ' ' . __('Posts RSS feed', 'thematic');
+        $content .= ' ' . __('Posts RSS feed', 'datse-multimedia-base');
         $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_rss', $content);
@@ -340,7 +340,7 @@ function thematic_show_commentsrss() {
         $content .= get_feed_link( 'comments_' . get_default_feed() );
         $content .= '" title="';
         $content .= esc_attr( get_bloginfo('name') );
-        $content .= ' ' . __('Comments RSS feed', 'thematic');
+        $content .= ' ' . __('Comments RSS feed', 'datse-multimedia-base');
         $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_commentsrss', $content);

@@ -341,7 +341,7 @@ function thematic_legacy_comment_form(){
 		
 		<?php if ( get_option( 'comment_registration' ) && !$user_ID ) : ?>
 		
-			<p id="login-req"><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ) ?></p>
+			<p id="login-req"><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'datse-multimedia-base'), sprintf('<a href="%s" title ="%s">', wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ), esc_attr__( 'Log in', 'datse-multimedia-base' ) ), '</a>' ) ?></p>
 			
 		<?php else : ?>
 		
@@ -354,7 +354,7 @@ function thematic_legacy_comment_form(){
 				<form id="commentform" action="<?php echo site_url( '/wp-comments-post.php' ) ?>" method="post">
 				
 				<?php if ( $user_ID ) : ?>
-					<p id="login"><span class="loggedin"><?php _e('Logged in as', 'datse-multimedia-base' ) . printf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ;?></span> <span class="logout"><?php printf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ); ?></span>
+					<p id="login"><span class="loggedin"><?php _e('Logged in as', 'datse-multimedia-base' ) . printf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'datse-multimedia-base'), $user_identity ) , $user_identity ) ;?></span> <span class="logout"><?php printf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'datse-multimedia-base' ) , __('Log out?', 'datse-multimedia-base' ) ); ?></span>
 					</p>
 	
 				<?php else : ?>

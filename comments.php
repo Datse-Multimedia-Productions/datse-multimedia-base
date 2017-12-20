@@ -21,7 +21,7 @@
 				<?php 
 					// Disable direct access to the comments script
 					if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
-					    die ( __('Please do not load this page directly.', 'thematic')  );
+					    die ( __('Please do not load this page directly.', 'datse-multimedia-base')  );
 					
 					// Set required varible from options
 					$req = get_option('require_name_email');
@@ -74,7 +74,7 @@
 					
 					<div id="comments-list-wrapper" class="comments">
 
-						<h3><?php printf( $thematic_comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $thematic_comment_count ) ?></h3>
+						<h3><?php printf( $thematic_comment_count > 1 ? __( thematic_multiplecomments_text(), 'datse-multimedia-base' ) : __( thematic_singlecomment_text(), 'datse-multimedia-base' ), $thematic_comment_count ) ?></h3>
 	
 						<ol id="comments-list" >
 							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
@@ -108,7 +108,7 @@
 						
 					<div id="pings-list-wrapper" class="pings">
 						
-						<h3><?php printf( $thematic_ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : sprintf( _x( '%1$sOne%2$s Trackback', '%1$ and %2$s are <span> tags', 'thematic' ), '<span>', '</span>' ), $thematic_ping_count ) ?></h3>
+						<h3><?php printf( $thematic_ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'datse-multimedia-base' ) : sprintf( _x( '%1$sOne%2$s Trackback', '%1$ and %2$s are <span> tags', 'thematic' ), '<span>', '</span>' ), $thematic_ping_count ) ?></h3>
 	
 						<ul id="trackbacks-list">
 							<?php wp_list_comments( 'type=pings&callback=thematic_pings' ); ?>

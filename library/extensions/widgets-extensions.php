@@ -31,13 +31,13 @@ function thematic_search_form() {
 	if (is_search()) {
 	    	$search_form .= '<input id="s" name="s" type="text" value="' . esc_html ( stripslashes( $_GET['s'] ) ) .'" size="' . $search_form_length . '" tabindex="1" />';
 	} else {
-	    	$value = __( 'To search, type and hit enter', 'thematic' );
+	    	$value = __( 'To search, type and hit enter', 'datse-multimedia-base' );
 	    	$value = apply_filters( 'search_field_value',$value );
 	    	$search_form .= '<input id="s" name="s" type="text" value="' . $value . '" onfocus="if (this.value == \'' . $value . '\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'' . $value . '\';}" size="'. $search_form_length .'" tabindex="1" />';
 	}
 	$search_form .= "\n\n\t\t\t\t\t\t\t\t";
 	
-	$search_submit = '<input id="searchsubmit" name="searchsubmit" type="submit" value="' . __('Search', 'thematic') . '" tabindex="2" />';
+	$search_submit = '<input id="searchsubmit" name="searchsubmit" type="submit" value="' . __('Search', 'datse-multimedia-base') . '" tabindex="2" />';
 	
 	$search_form .= apply_filters('thematic_search_submit', $search_submit);
 	
@@ -67,9 +67,9 @@ function thematic_widgets_array() {
 		'Primary Aside' => array(
 			'admin_menu_order' => 100,
 			'args' => array (
-				'name' => __( 'Primary Aside', 'thematic' ),
+				'name' => __( 'Primary Aside', 'datse-multimedia-base' ),
 				'id' => 'primary-aside',
-                'description' => __('The primary widget area, most often used as a sidebar.', 'thematic'),
+                'description' => __('The primary widget area, most often used as a sidebar.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -82,9 +82,9 @@ function thematic_widgets_array() {
 		'Secondary Aside' => array(
 			'admin_menu_order' => 200,
 			'args' => array (
-				'name' => __( 'Secondary Aside', 'thematic' ),
+				'name' => __( 'Secondary Aside', 'datse-multimedia-base' ),
 				'id' => 'secondary-aside',
-                'description' => __('The secondary widget area, most often used as a sidebar.', 'thematic'),
+                'description' => __('The secondary widget area, most often used as a sidebar.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -97,9 +97,9 @@ function thematic_widgets_array() {
 		'1st Subsidiary Aside' => array(
 			'admin_menu_order' => 300,
 			'args' => array (
-				'name' => __( '1st Subsidiary Aside', 'thematic' ),
+				'name' => __( '1st Subsidiary Aside', 'datse-multimedia-base' ),
 				'id' => '1st-subsidiary-aside',
-                'description' => __('The 1st widget area in the footer.', 'thematic'),
+                'description' => __('The 1st widget area in the footer.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -112,9 +112,9 @@ function thematic_widgets_array() {
 		'2nd Subsidiary Aside' => array(
 			'admin_menu_order' => 400,
 			'args' => array (
-				'name' => __( '2nd Subsidiary Aside', 'thematic' ),
+				'name' => __( '2nd Subsidiary Aside', 'datse-multimedia-base' ),
 				'id' => '2nd-subsidiary-aside',
-                'description' => __('The 2nd widget area in the footer.', 'thematic'),
+                'description' => __('The 2nd widget area in the footer.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -127,9 +127,9 @@ function thematic_widgets_array() {
 		'3rd Subsidiary Aside' => array(
 			'admin_menu_order' => 500,
 			'args' => array (
-				'name' => __( '3rd Subsidiary Aside', 'thematic' ),
+				'name' => __( '3rd Subsidiary Aside', 'datse-multimedia-base' ),
 				'id' => '3rd-subsidiary-aside',
-                'description' => __('The 3rd widget area in the footer.', 'thematic'),
+                'description' => __('The 3rd widget area in the footer.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -142,9 +142,9 @@ function thematic_widgets_array() {
 		'Index Top' => array(
 			'admin_menu_order' => 600,
 			'args' => array (
-				'name' => __( 'Index Top', 'thematic' ),
+				'name' => __( 'Index Top', 'datse-multimedia-base' ),
 				'id' => 'index-top',
-                'description' => __('The top widget area displayed on the index page.', 'thematic'),
+                'description' => __('The top widget area displayed on the index page.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -157,9 +157,9 @@ function thematic_widgets_array() {
 		'Index Insert' => array(
 			'admin_menu_order' => 700,
 			'args' => array (
-				'name' => __( 'Index Insert', 'thematic' ),
+				'name' => __( 'Index Insert', 'datse-multimedia-base' ),
 				'id' => 'index-insert',
-                'description' => __('The widget area inserted after x posts on the index page.', 'thematic'),
+                'description' => __('The widget area inserted after x posts on the index page.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -172,9 +172,9 @@ function thematic_widgets_array() {
 		'Index Bottom' => array(
 			'admin_menu_order' => 800,
 			'args' => array (
-				'name' => __( 'Index Bottom', 'thematic' ),
+				'name' => __( 'Index Bottom', 'datse-multimedia-base' ),
 				'id' => 'index-bottom',
-                'description' => __('The bottom widget area displayed on the index page.', 'thematic'),
+                'description' => __('The bottom widget area displayed on the index page.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -187,9 +187,9 @@ function thematic_widgets_array() {
 		'Single Top' => array(
 			'admin_menu_order' => 900,
 			'args' => array (
-				'name' => __( 'Single Top', 'thematic' ),
+				'name' => __( 'Single Top', 'datse-multimedia-base' ),
 				'id' => 'single-top',
-                'description' => __('The top widget area displayed on a single post.', 'thematic'),
+                'description' => __('The top widget area displayed on a single post.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -202,9 +202,9 @@ function thematic_widgets_array() {
 		'Single Insert' => array(
 			'admin_menu_order' => 1000,
 			'args' => array (
-				'name' => __( 'Single Insert', 'thematic' ),
+				'name' => __( 'Single Insert', 'datse-multimedia-base' ),
 				'id' => 'single-insert',
-                'description' => __('The widget area inserted between the post and the comments on a single post.', 'thematic'),
+                'description' => __('The widget area inserted between the post and the comments on a single post.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -217,9 +217,9 @@ function thematic_widgets_array() {
 		'Single Bottom' => array(
 			'admin_menu_order' => 1100,
 			'args' => array (
-				'name' => __( 'Single Bottom', 'thematic' ),
+				'name' => __( 'Single Bottom', 'datse-multimedia-base' ),
 				'id' => 'single-bottom',
-                'description' => __('The bottom widget area displayed on a single post.', 'thematic'),
+                'description' => __('The bottom widget area displayed on a single post.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -232,9 +232,9 @@ function thematic_widgets_array() {
 		'Page Top' => array(
 			'admin_menu_order' => 1200,
 			'args' => array (
-				'name' => __( 'Page Top', 'thematic' ),
+				'name' => __( 'Page Top', 'datse-multimedia-base' ),
 				'id' => 'page-top',
-                'description' => __('The top widget area displayed on a page.', 'thematic'),
+                'description' => __('The top widget area displayed on a page.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),
@@ -247,9 +247,9 @@ function thematic_widgets_array() {
 		'Page Bottom' => array(
 			'admin_menu_order' => 1300,
 			'args' => array (
-				'name' => __( 'Page Bottom', 'thematic' ),
+				'name' => __( 'Page Bottom', 'datse-multimedia-base' ),
 				'id' => 'page-bottom',
-                'description' => __('The bottom widget area displayed on a page.', 'thematic'),
+                'description' => __('The bottom widget area displayed on a page.', 'datse-multimedia-base'),
 				'before_widget' => thematic_before_widget(),
 				'after_widget' => thematic_after_widget(),
 				'before_title' => thematic_before_title(),

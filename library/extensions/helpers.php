@@ -47,7 +47,7 @@ function thematic_the_excerpt( $deprecated = '' ) {
 	$output = strip_tags( $post->post_excerpt );
 	$output = str_replace( '"', '\'', $output );
 	if ( post_password_required($post) ) {
-		$output = __( 'There is no excerpt because this is a protected post.', 'thematic');
+		$output = __( 'There is no excerpt because this is a protected post.', 'datse-multimedia-base');
 		return $output;
 	}
 
@@ -66,7 +66,7 @@ function thematic_excerpt_rss() {
 	$output = '';
 	$output = strip_tags( $post->post_excerpt );
 	if ( post_password_required( $post ) ) {
-		$output = __( 'There is no excerpt because this is a protected post.', 'thematic' );
+		$output = __( 'There is no excerpt because this is a protected post.', 'datse-multimedia-base' );
 		return $output;
 }
 

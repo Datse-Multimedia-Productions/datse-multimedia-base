@@ -52,13 +52,13 @@ function thematic_after_title() {
 class Thematic_Widget_Search extends WP_Widget {
 
 	function Thematic_Widget_Search() {
-		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
-		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
+		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
+		$this->WP_Widget('search', __('Search', 'datse-multimedia-base'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'datse-multimedia-base') : $instance['title']);
 
 		echo $before_widget;
 		if ( $title )
@@ -97,13 +97,13 @@ class Thematic_Widget_Search extends WP_Widget {
 class Thematic_Widget_Meta extends WP_Widget {
 
 	function Thematic_Widget_Meta() {
-		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
-		$this->WP_Widget('meta', __('Meta', 'thematic'), $widget_ops);
+		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'datse-multimedia-base') );
+		$this->WP_Widget('meta', __('Meta', 'datse-multimedia-base'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Meta', 'thematic') : $instance['title']);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Meta', 'datse-multimedia-base') : $instance['title']);
 
 		echo $before_widget;
 		if ( $title )
@@ -142,13 +142,13 @@ class Thematic_Widget_Meta extends WP_Widget {
 class Thematic_Widget_RSSlinks extends WP_Widget {
 
 	function Thematic_Widget_RSSlinks() {
-		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'thematic') );
-		$this->WP_Widget( 'rss-links', __('RSS Links', 'thematic'), $widget_ops);
+		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'datse-multimedia-base') );
+		$this->WP_Widget( 'rss-links', __('RSS Links', 'datse-multimedia-base'), $widget_ops);
 	}
 
 	function widget($args, $instance) {
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('RSS Links', 'thematic') : $instance['title']);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('RSS Links', 'datse-multimedia-base') : $instance['title']);
 		echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title;
