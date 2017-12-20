@@ -92,6 +92,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
  
 		add_theme_support( 'thematic_superfish' );
 
+		// Add support for the title-tag
+		add_theme_support( 'title-tag' );
+
 		// Path constants
 		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
 
