@@ -199,13 +199,12 @@ if (function_exists('childtheme_override_opt_page_help')) {
 		$screen = get_current_screen();
 
 		$theme = wp_get_theme();
-		var_dump($theme);
 		
 		$sidebar  = '<p><strong>' . __( 'For more information:', 'datse-multimedia-base') . '</strong></p>';
 		$sidebar .= '<a href=';
-		$sidebar .= $theme=>get('ThemeURI');
+		$sidebar .= $theme->get('ThemeURI');
 		$sidebar .= '">';
-		$sidebar .= $theme=>get('Name');
+		$sidebar .= $theme->get('Name');
 		$sidebar .= '</a> </p>';
 		
 		$sidebar = apply_filters ( 'thematic_theme_opt_help_sidebar', $sidebar );
