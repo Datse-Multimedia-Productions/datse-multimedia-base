@@ -202,7 +202,11 @@ if (function_exists('childtheme_override_opt_page_help')) {
 		var_dump($theme);
 		
 		$sidebar  = '<p><strong>' . __( 'For more information:', 'datse-multimedia-base') . '</strong></p>';
-		$sidebar .= '<a href='. $theme=>get('ThemeURI') .'">'. $theme=>get('Name') .'</a> </p>';
+		$sidebar .= '<a href=';
+		$sidebar .= $theme=>get('ThemeURI');
+		$sidebar .= '">';
+		$sidebar .= $theme=>get('Name');
+		$sidebar .= '</a> </p>';
 		
 		$sidebar = apply_filters ( 'thematic_theme_opt_help_sidebar', $sidebar );
 		
