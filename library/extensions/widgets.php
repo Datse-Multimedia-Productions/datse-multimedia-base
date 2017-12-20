@@ -51,7 +51,7 @@ function thematic_after_title() {
  */
 class Thematic_Widget_Search extends WP_Widget {
 
-	function Thematic_Widget_Search() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
 		$this->__construct('search', __('Search', 'datse-multimedia-base'), $widget_ops);
 	}
@@ -96,7 +96,7 @@ class Thematic_Widget_Search extends WP_Widget {
  */
 class Thematic_Widget_Meta extends WP_Widget {
 
-	function Thematic_Widget_Meta() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'datse-multimedia-base') );
 		$this->__construct('meta', __('Meta', 'datse-multimedia-base'), $widget_ops);
 	}
@@ -141,7 +141,7 @@ class Thematic_Widget_Meta extends WP_Widget {
  */
 class Thematic_Widget_RSSlinks extends WP_Widget {
 
-	function Thematic_Widget_RSSlinks() {
+	function __construct() {
 		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'datse-multimedia-base') );
 		$this->__construct( 'rss-links', __('RSS Links', 'datse-multimedia-base'), $widget_ops);
 	}
