@@ -34,7 +34,7 @@ function thematic_comments($comment, $args, $depth) {
     			<?php  
     				if ( $comment->comment_approved == '0' ) {
     					echo "\t\t\t\t\t" . '<span class="unapproved">';
-    					_e( 'Your comment is awaiting moderation', 'thematic' );
+    					_e( 'Your comment is awaiting moderation', 'datse-multimedia-base' );
     					echo ".</span>\n";
     				}
     			?>
@@ -49,8 +49,8 @@ function thematic_comments($comment, $args, $depth) {
 				
 				if( $args['type'] == 'all' || get_comment_type() == 'comment' ) :
 					comment_reply_link( array_merge( $args, array(
-						'reply_text' => __( 'Reply','thematic' ), 
-						'login_text' => __( 'Log in to reply.','thematic' ),
+						'reply_text' => __( 'Reply','datse-multimedia-base' ), 
+						'login_text' => __( 'Log in to reply.','datse-multimedia-base' ),
 						'depth'      => $depth,
 						'before'     => '<div class="comment-reply-link">', 
 						'after'      => '</div>'
@@ -81,13 +81,13 @@ function thematic_pings($comment, $args, $depth) {
     					get_comment_author_link(),
     					get_comment_date(),
     					get_comment_time() );
-    					edit_comment_link(__('Edit', 'thematic'), ' <span class="meta-sep">|</span>' . "\n\n\t\t\t\t\t\t" . '<span class="edit-link">', '</span>'); ?>
+    					edit_comment_link(__('Edit', 'datse-multimedia-base'), ' <span class="meta-sep">|</span>' . "\n\n\t\t\t\t\t\t" . '<span class="edit-link">', '</span>'); ?>
     			</div>
     			
     			<?php 
     				if ($comment->comment_approved == '0') {
     				echo "\t\t\t\t\t" . '<span class="unapproved">';
-    					_e( 'Your trackback is awaiting moderation', 'thematic' );
+    					_e( 'Your trackback is awaiting moderation', 'datse-multimedia-base' );
     					
     				echo ".</span>\n";
     				}

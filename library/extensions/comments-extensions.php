@@ -128,7 +128,7 @@ function thematic_singlecomment_text() {
  * Located in comments.php
  */
 function thematic_multiplecomments_text() {
-    $content = '<span>%d</span> ' . __('Comments', 'thematic');
+    $content = '<span>%d</span> ' . __('Comments', 'datse-multimedia-base');
     return apply_filters( 'thematic_multiplecomments_text', $content );
 }
 
@@ -152,7 +152,7 @@ function thematic_list_comments_arg() {
  */
 function thematic_postcomment_text() {
 	/* translators: comment form title */
-    $content = __('Post a Comment', 'thematic');
+    $content = __('Post a Comment', 'datse-multimedia-base');
     return apply_filters( 'thematic_postcomment_text', $content );
 }
 
@@ -164,7 +164,7 @@ function thematic_postcomment_text() {
  */
 function thematic_postreply_text() {
 	/* translators: comment reply form title, %s is author of comment */
-    $content = __('Post a Reply to %s', 'thematic');
+    $content = __('Post a Reply to %s', 'datse-multimedia-base');
     return apply_filters( 'thematic_postreply_text', $content );
 }
 
@@ -187,7 +187,7 @@ function thematic_commentbox_text() {
  * Located in comments-extensions.php
  */
 function thematic_cancelreply_text() {
-    $content = __('Cancel reply', 'thematic');
+    $content = __('Cancel reply', 'datse-multimedia-base');
     return apply_filters( 'thematic_cancelreply_text', $content );
 }
 
@@ -199,7 +199,7 @@ function thematic_cancelreply_text() {
  */
 function thematic_commentbutton_text() {
 	/* translators: text of comment button */
-    $content = esc_attr( __('Post Comment', 'thematic') );
+    $content = esc_attr( __('Post Comment', 'datse-multimedia-base') );
     return apply_filters( 'thematic_commentbutton_text', $content );
 }
 
@@ -225,21 +225,21 @@ function thematic_comment_form_args( $post_id = null ) {
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 	
 	$fields =  array(
-		'author' => '<div id="form-section-author" class="form-section"><div class="form-label">' . '<label for="author">' . __( 'Name', 'thematic' ) . '</label> ' . ( $req ? '<span class="required">' . _x( '*', 'denotes required field', 'thematic' ) . '</span>' : '' ) . '</div>' . '<div class="form-input">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' .  ' maxlength="20" tabindex="3"' . $aria_req . ' /></div></div><!-- #form-section-author .form-section -->',
-		'email'  => '<div id="form-section-email" class="form-section"><div class="form-label"><label for="email">' . __( 'Email', 'thematic' ) . '</label> ' . ( $req ? '<span class="required">' . _x( '*', 'denotes required field', 'thematic' ) . '</span>' : '' ) . '</div><div class="form-input">' . '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="50" tabindex="4"' . $aria_req . ' /></div></div><!-- #form-section-email .form-section -->',
-		'url'    => '<div id="form-section-url" class="form-section"><div class="form-label"><label for="url">' . __( 'Website', 'thematic' ) . '</label></div>' . '<div class="form-input"><input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="50" tabindex="5" /></div></div><!-- #form-section-url .form-section -->',
+		'author' => '<div id="form-section-author" class="form-section"><div class="form-label">' . '<label for="author">' . __( 'Name', 'datse-multimedia-base' ) . '</label> ' . ( $req ? '<span class="required">' . _x( '*', 'denotes required field', 'thematic' ) . '</span>' : '' ) . '</div>' . '<div class="form-input">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' .  ' maxlength="20" tabindex="3"' . $aria_req . ' /></div></div><!-- #form-section-author .form-section -->',
+		'email'  => '<div id="form-section-email" class="form-section"><div class="form-label"><label for="email">' . __( 'Email', 'datse-multimedia-base' ) . '</label> ' . ( $req ? '<span class="required">' . _x( '*', 'denotes required field', 'thematic' ) . '</span>' : '' ) . '</div><div class="form-input">' . '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="50" tabindex="4"' . $aria_req . ' /></div></div><!-- #form-section-email .form-section -->',
+		'url'    => '<div id="form-section-url" class="form-section"><div class="form-label"><label for="url">' . __( 'Website', 'datse-multimedia-base' ) . '</label></div>' . '<div class="form-input"><input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="50" tabindex="5" /></div></div><!-- #form-section-url .form-section -->',
 	);
 
 	
 	$args = array(
 		'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_field'        => '<div id="form-section-comment" class="form-section"><div class="form-label"><label for="comment">' . __(thematic_commentbox_text(), 'thematic') . '</label></div><div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6" aria-required="true"></textarea></div></div><!-- #form-section-comment .form-section -->',
+		'comment_field'        => '<div id="form-section-comment" class="form-section"><div class="form-label"><label for="comment">' . __(thematic_commentbox_text(), 'datse-multimedia-base') . '</label></div><div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6" aria-required="true"></textarea></div></div><!-- #form-section-comment .form-section -->',
 
 		'comment_notes_before' => '<p class="comment-notes">' . sprintf( _x( 'Your email is %1$snever%2$s published nor shared.' , '%$1s and %$2s are <em> tags for emphasis on never', 'thematic' ), '<em>' , '</em>' ) . ( $req ? ' ' . sprintf( _x('Required fields are marked %1$s*%2$s', '%$1s and %$2s are <span> tags', 'thematic'), '<span class="required">', '</span>' ) : '' ) . '</p>',
 
-		'must_log_in'          => '<p id="login-req">' .  sprintf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', esc_attr( wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ). '</p>',
+		'must_log_in'          => '<p id="login-req">' .  sprintf( __('You must be %1$slogged in%2$s to post a comment.', 'datse-multimedia-base'), sprintf('<a href="%s" title ="%s">', esc_attr( wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ), esc_attr__( 'Log in', 'datse-multimedia-base' ) ), '</a>' ). '</p>',
 
-		'logged_in_as'         => '<p id="login"><span class="loggedin">' . sprintf( __('Logged in as %s', 'thematic' ), sprintf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ) .'</span> <span class="logout">' . sprintf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ) . '</span></p>',
+		'logged_in_as'         => '<p id="login"><span class="loggedin">' . sprintf( __('Logged in as %s', 'datse-multimedia-base' ), sprintf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'datse-multimedia-base'), $user_identity ) , $user_identity ) ) .'</span> <span class="logout">' . sprintf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'datse-multimedia-base' ) , __('Log out?', 'datse-multimedia-base' ) ) . '</span></p>',
 		
 		'comment_notes_after'  => '<div id="form-allowed-tags" class="form-section"><p><span>' . sprintf( _x('You may use these %1$sHTML%2$s tags and attributes', '%$1s and %$2s are <abbr> tags', 'thematic'), '<abbr title="HyperText Markup Language">', '</abbr>' ) . '</span> <code>' . allowed_tags() . '</code></p></div>',
 

@@ -2,13 +2,13 @@
 THEME NAME: Datse Multimedia Base 
 THEME URI: http://datsemultimedia.com/themes/datse-multimedia-base
 DESCRIPTION: This theme is a fork of the Thematic Theme Framework by <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>.  This theme was created as a base for all themes which Datse Multimedia Productions creates.  Some of those themes <em>may</em> end up having "base" versions which future themes can be built on.  The original Thematic description was:  The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development.
-VERSION: 0.1.7
-AUTHOR: <a href="http://JigmeDatse.com/">Jigme Datse Yli-Rasku</a>, <a href="http://DatseMultimedia.com/">Datse Multimedia Productions</a>, <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>
+VERSION: 0.1.9
+AUTHOR: <a href="http://JigmeDatse.com/">Jigme Datse Yli-Rasku</a>, <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>
 AUTHOR URI: http://datsemultimedia.com/
-TAGS: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
+TAGS: three-columns, two-columns, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
+Text Domain: datse-multimedia-base
 .
 The Datse Multimedia Base Theme is copyright Ian Stewart http://themeshaper.com/
 This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
@@ -55,17 +55,20 @@ This work, like WordPress, is released under GNU General Public License, version
     margin: 0 0 18px 0;
     max-width:100%;
 }
+
 .alignleft,
 img.alignleft {
 	float: left;
     margin-right:20px;
 }
+
 .alignright,
 img.alignright {
 	display: block;
 	float: right;
     margin-left:20px;
 }
+
 .aligncenter,
 img.aligncenter {
 	margin-left:auto;
@@ -73,24 +76,62 @@ img.aligncenter {
 	display: block;
 	clear: both;
 }
+
 .wp-caption {
 	text-align: center;
 	margin-bottom:18px;
 	max-width: 96%;
 }
+
 .wp-caption img {
 	margin: 0;
 	padding: 0;
 	border: 0 none;
 }
+
 .wp-caption p.wp-caption-text {
 	margin: 0;
 	padding:5px;
 }
+
 .gallery img {
     margin:0;
 }
+
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
 	margin:0 !important;
-}`
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+

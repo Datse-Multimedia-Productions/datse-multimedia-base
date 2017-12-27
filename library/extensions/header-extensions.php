@@ -46,27 +46,6 @@ function thematic_create_contenttype() {
 }
 
 
-if ( function_exists('childtheme_override_doctitle') )  {
-	/**
-	 * @ignore
-	 */
-	 function thematic_doctitle() {
-    	childtheme_override_doctitle();
-    }
-} else {
-	/**
-	 * Display the content of the title tag
-	 * 
-	 * Override: childtheme_override_doctitle
-	 * Filter: thematic_doctitle_separator
-	 *
-	 */
-	function thematic_doctitle() {
-        $separator = apply_filters('thematic_doctitle_separator', '|');
-        $doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
-        echo $doctitle;
-	} // end thematic_doctitle
-}
 
 	
 /**
@@ -96,19 +75,19 @@ function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) {
       $content = single_post_title('', FALSE); 
     }
     elseif ( is_search() ) { 
-      $content = __('Search Results for:', 'thematic'); 
+      $content = __('Search Results for:', 'datse-multimedia-base'); 
       $content .= ' ' . get_search_query();
     }
     elseif ( is_category() ) {
-      $content = __('Category Archives:', 'thematic');
+      $content = __('Category Archives:', 'datse-multimedia-base');
       $content .= ' ' . single_cat_title('', FALSE);;
     }
     elseif ( is_tag() ) { 
-      $content = __('Tag Archives:', 'thematic');
+      $content = __('Tag Archives:', 'datse-multimedia-base');
       $content .= ' ' . thematic_tag_query();
     }
     elseif ( is_404() ) { 
-      $content = __('Not Found', 'thematic'); 
+      $content = __('Not Found', 'datse-multimedia-base'); 
     }
     else { 
       $content = get_bloginfo('description', 'display');
@@ -316,7 +295,7 @@ function thematic_show_rss() {
         $content .= get_feed_link( get_default_feed() );
         $content .= '" title="';
         $content .= esc_attr( get_bloginfo('name', 'display') );
-        $content .= ' ' . __('Posts RSS feed', 'thematic');
+        $content .= ' ' . __('Posts RSS feed', 'datse-multimedia-base');
         $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_rss', $content);
@@ -340,7 +319,7 @@ function thematic_show_commentsrss() {
         $content .= get_feed_link( 'comments_' . get_default_feed() );
         $content .= '" title="';
         $content .= esc_attr( get_bloginfo('name') );
-        $content .= ' ' . __('Comments RSS feed', 'thematic');
+        $content .= ' ' . __('Comments RSS feed', 'datse-multimedia-base');
         $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_commentsrss', $content);
@@ -413,8 +392,6 @@ if ( function_exists('childtheme_override_head_scripts') )  {
 			$scriptdir .= '/library/scripts/';
 
 			wp_enqueue_script('jquery');
-			wp_deregister_script('hoverIntent');
-      wp_enqueue_script('hoverIntent', includes_url('js/hoverIntent.js'), array('jquery'), false, true);
 			wp_enqueue_script('superfish', $scriptdir . 'superfish.js', array('jquery'), '1.4.8', true);
 			wp_enqueue_script('supersubs', $scriptdir . 'supersubs.js', array('jquery'), '0.2b', true);
 			wp_enqueue_script('thematic-dropdowns', apply_filters('thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js') , array('jquery', 'superfish' ), '1.0', true);
@@ -590,7 +567,9 @@ if ( function_exists( 'childtheme_override_blogtitle' ) )  {
     function thematic_blogtitle() { 
     ?>
     
-    	<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+    	<div id="blog-title">
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+		<span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
     
     <?php 
     }
@@ -664,7 +643,7 @@ if ( function_exists('childtheme_override_access') )  {
     
     <div id="access">
     
-    	<div class="skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
+    	<div class="skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'datse-multimedia-base' ); ?>"><?php _e('Skip to content', 'datse-multimedia-base'); ?></a></div><!-- .skip-link -->
     	
     	<?php 
     	if ( ( function_exists("has_nav_menu") ) && ( has_nav_menu( apply_filters('thematic_primary_menu_id', 'primary-menu') ) ) ) {
