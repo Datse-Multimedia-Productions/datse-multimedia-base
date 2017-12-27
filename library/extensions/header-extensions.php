@@ -46,27 +46,6 @@ function thematic_create_contenttype() {
 }
 
 
-if ( function_exists('childtheme_override_doctitle') )  {
-	/**
-	 * @ignore
-	 */
-	 function thematic_doctitle() {
-    	childtheme_override_doctitle();
-    }
-} else {
-	/**
-	 * Display the content of the title tag
-	 * 
-	 * Override: childtheme_override_doctitle
-	 * Filter: thematic_doctitle_separator
-	 *
-	 */
-	function thematic_doctitle() {
-        $separator = apply_filters('thematic_doctitle_separator', '|');
-        $doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
-        echo $doctitle;
-	} // end thematic_doctitle
-}
 
 	
 /**
@@ -588,7 +567,9 @@ if ( function_exists( 'childtheme_override_blogtitle' ) )  {
     function thematic_blogtitle() { 
     ?>
     
-    	<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+    	<div id="blog-title">
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+		<span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
     
     <?php 
     }
