@@ -92,6 +92,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
  
 		add_theme_support( 'thematic_superfish' );
 
+		// Add support for the title-tag
+		add_theme_support( 'title-tag' );
+
 		// Path constants
 		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
 
@@ -191,7 +194,7 @@ if ( function_exists('childtheme_override_init_navmenu') )  {
 	 * Filter: thematic_primary_menu_name
 	 */
     function thematic_init_navmenu() {
-		register_nav_menu( apply_filters('thematic_primary_menu_id', 'primary-menu'), apply_filters('thematic_primary_menu_name', __( 'Primary Menu', 'thematic' ) ) );
+		register_nav_menu( apply_filters('thematic_primary_menu_id', 'primary-menu'), apply_filters('thematic_primary_menu_name', __( 'Primary Menu', 'datse-multimedia-base' ) ) );
 	}
 }
 add_action('init', 'thematic_init_navmenu');

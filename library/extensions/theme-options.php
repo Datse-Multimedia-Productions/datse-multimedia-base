@@ -47,13 +47,13 @@ if (function_exists('childtheme_override_opt_init')) {
 		
 		add_settings_section ('thematic_opt_section_main', '', 'thematic_do_opt_section_main', 'thematic_theme_opt');
 	
-		add_settings_field ('thematic_insert_opt', __('Index Insert Position', 'thematic')	, 'thematic_do_insert_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
-		add_settings_field ('thematic_auth_opt',   __('Info on Author Page'	, 'thematic')	, 'thematic_do_auth_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
-		add_settings_field ('thematic_footer_opt', __('Text in Footer'	, 'thematic')		, 'thematic_do_footer_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		add_settings_field ('thematic_insert_opt', __('Index Insert Position', 'datse-multimedia-base')	, 'thematic_do_insert_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		add_settings_field ('thematic_auth_opt',   __('Info on Author Page'	, 'datse-multimedia-base')	, 'thematic_do_auth_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		add_settings_field ('thematic_footer_opt', __('Text in Footer'	, 'datse-multimedia-base')		, 'thematic_do_footer_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		
 		// Show checkbox option for removing old options from database
 		if ( isset( $legacy_options ) && false !== $legacy_options ) {
-			add_settings_field ('thematic_legacy_opt', __('Remove Legacy Options'	, 'thematic'), 'thematic_do_legacy_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+			add_settings_field ('thematic_legacy_opt', __('Remove Legacy Options'	, 'datse-multimedia-base'), 'thematic_do_legacy_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		} 
 	
 	}
@@ -167,7 +167,7 @@ function thematic_default_opt() {
  
 function thematic_opt_add_page() {
 
-	$thematic_opt_page = add_theme_page ( __('Theme Options', 'thematic') , __('Theme Options', 'thematic'), 'edit_theme_options', 'thematic_opt', 'thematic_do_opt_page');
+	$thematic_opt_page = add_theme_page ( __('Theme Options', 'datse-multimedia-base') , __('Theme Options', 'datse-multimedia-base'), 'edit_theme_options', 'thematic_opt', 'thematic_do_opt_page');
 	$thematic_opt_page = apply_filters ('thematic_theme_add_opt_page', $thematic_opt_page );
 	
 	if ( ! $thematic_opt_page ) {
@@ -197,21 +197,20 @@ if (function_exists('childtheme_override_opt_page_help')) {
 	function thematic_opt_page_help() {	
 		
 		$screen = get_current_screen();
+
+		$theme = wp_get_theme();
 		
-		$sidebar  = '<p><strong>' . __( 'For more information:', 'thematic') . '</strong></p>';
-		$sidebar .= '<a href="http://thematictheme.com">ThematicTheme.com</a></p>';
-		$sidebar .= '<p><strong>' . __('For support:', 'thematic') . '</strong></p>';
-		$sidebar .= '<a href="http://thematictheme.com/forums/"> Thematic ';
-		$sidebar .= __('forums', 'thematic' ) . '</a></p>';
+		$sidebar  = '<p><strong>' . __( 'For more information:', 'datse-multimedia-base') . '</strong></p>';
+		$sidebar .= '<a href='. $theme=>get('ThemeURI') . '">'. $theme=>get('Name') .'</a> </p>';
 		
 		$sidebar = apply_filters ( 'thematic_theme_opt_help_sidebar', $sidebar );
 		
-		$help =  '<p>' . __('The options below are enabled by the Thematic Theme framework and/or a child theme.', 'thematic') .' ';
-		$help .= __('New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also.', 'thematic') . '</p>';
+		$help =  '<p>' . __('The options below are enabled by the Thematic Theme framework and/or a child theme.', 'datse-multimedia-base') .' ';
+		$help .= __('New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also.', 'datse-multimedia-base') . '</p>';
 		
 		$help = apply_filters ( 'thematic_theme_opt_help_txt', $help );
 	
-        $screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
+        $screen->add_help_tab( array( 'title' => __( 'Overview', 'datse-multimedia-base' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
 		$screen->set_help_sidebar( $sidebar );
                         
         }
@@ -225,7 +224,6 @@ if (function_exists('childtheme_override_opt_page_help')) {
 function thematic_do_opt_page() { ?>
 
  <div class="wrap">
-	<?php screen_icon(); ?>
 
 	<?php 
 		$frameworkData = wp_get_theme();
@@ -269,8 +267,8 @@ function thematic_do_opt_section_main() {
  */
 function thematic_do_insert_opt() { 
 ?>
-	<input type="text" maxlength="4" size="4" value="<?php esc_attr_e( (thematic_get_theme_opt('index_insert') ) ) ;  ?>" id="thm_insert_position" name="thematic_theme_opt[index_insert]">
-	<label for="thm_insert_position"><?php _e('The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature.','thematic'); ?></label>
+	<input type="text" maxlength="4" size="4" value="<?php esc_attr_e( (thematic_get_theme_opt('index_insert') ), 'datse-multimedia-base' ) ;  ?>" id="thm_insert_position" name="thematic_theme_opt[index_insert]">
+	<label for="thm_insert_position"><?php _e('The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature.','datse-multimedia-base'); ?></label>
 <?php 
 }
 
@@ -342,7 +340,7 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   		add_settings_error(
  	   			'thematic_theme_opt',
  	   			'thematic_insert_opt',
- 	   			__('The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value.', 'thematic' ),
+ 	   			__('The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value.', 'datse-multimedia-base' ),
  	   			'error'
  	   		);
  	   } else {

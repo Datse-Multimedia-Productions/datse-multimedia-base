@@ -19,7 +19,7 @@
  */
 
 	// Providing deprecated file notice to be seen when WP_DEBUG is true
-	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), 'Thematic 1.0', null, sprintf( __( 'You can include a %s in a childtheme', 'thematic' ) . '.', 'home.php' ) );
+	_deprecated_file( sprintf( __( 'The template %s', 'datse-multimedia-base' ) . ':', basename(__FILE__) ), 'Datse Multimedia Base 0.1.7', null, sprintf( __( 'You can include a %s in a childtheme', 'datse-multimedia-base' ) . '.', 'home.php' ) );
 
     // calling the header.php
     get_header();

@@ -52,7 +52,7 @@
 	                    	// action hook for displaying a list of archive links
 	                    	thematic_archives();
 
-	                    	edit_post_link( __( 'Edit', 'thematic' ),'<span class="edit-link">','</span>' );
+	                    	edit_post_link( __( 'Edit', 'datse-multimedia-base' ),'<span class="edit-link">','</span>' );
 	                    ?>
 
 					</div><!-- .entry-content -->

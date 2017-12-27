@@ -28,13 +28,13 @@ if (function_exists('childtheme_override_commentmeta'))  {
 						get_comment_date(),
 						get_comment_time() );
 
-		$content .= ' <span class="meta-sep">|</span> ' . sprintf( '<a href="%1$s" title="%2$s">%3$s</a>', '#comment-' . get_comment_ID() , __( 'Permalink to this comment', 'thematic' ), __( 'Permalink', 'thematic' ) );
+		$content .= ' <span class="meta-sep">|</span> ' . sprintf( '<a href="%1$s" title="%2$s">%3$s</a>', '#comment-' . get_comment_ID() , __( 'Permalink to this comment', 'datse-multimedia-base' ), __( 'Permalink', 'datse-multimedia-base' ) );
 							
 		if ( get_edit_comment_link() ) {
 			$content .=	sprintf(' <span class="meta-sep">|</span><span class="edit-link"> <a class="comment-edit-link" href="%1$s" title="%2$s">%3$s</a></span>',
 						get_edit_comment_link(),
-						__( 'Edit comment' , 'thematic' ),
-						__( 'Edit', 'thematic' ) );
+						__( 'Edit comment' , 'datse-multimedia-base' ),
+						__( 'Edit', 'datse-multimedia-base' ) );
 			}
 		
 		$content .= '</div>' . "\n";

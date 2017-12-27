@@ -341,7 +341,7 @@ function thematic_legacy_comment_form(){
 		
 		<?php if ( get_option( 'comment_registration' ) && !$user_ID ) : ?>
 		
-			<p id="login-req"><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ) ?></p>
+			<p id="login-req"><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'datse-multimedia-base'), sprintf('<a href="%s" title ="%s">', wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ), esc_attr__( 'Log in', 'datse-multimedia-base' ) ), '</a>' ) ?></p>
 			
 		<?php else : ?>
 		
@@ -354,7 +354,7 @@ function thematic_legacy_comment_form(){
 				<form id="commentform" action="<?php echo site_url( '/wp-comments-post.php' ) ?>" method="post">
 				
 				<?php if ( $user_ID ) : ?>
-					<p id="login"><span class="loggedin"><?php _e('Logged in as', 'thematic' ) . printf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ;?></span> <span class="logout"><?php printf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ); ?></span>
+					<p id="login"><span class="loggedin"><?php _e('Logged in as', 'datse-multimedia-base' ) . printf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'datse-multimedia-base'), $user_identity ) , $user_identity ) ;?></span> <span class="logout"><?php printf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'datse-multimedia-base' ) , __('Log out?', 'datse-multimedia-base' ) ); ?></span>
 					</p>
 	
 				<?php else : ?>
@@ -362,24 +362,24 @@ function thematic_legacy_comment_form(){
 					<p id="comment-notes"><?php printf( _x( 'Your email is %1$snever%2$s published nor shared.' , '%$1s and %$2s are <em> tags for emphasis on never', 'thematic' ), '<em>' , '</em>' ) ?></p>
 	
                     <div id="form-section-author" class="form-section">
-						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
+						<div class="form-label"><label for="author"><?php _e( 'Name', 'datse-multimedia-base' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'datse-multimedia-base' ) ?></div>
 						<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
                     </div><!-- #form-section-author .form-section -->
 	
                     <div id="form-section-email" class="form-section">
-						<div class="form-label"><label for="email"><?php _e( 'Email', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
+						<div class="form-label"><label for="email"><?php _e( 'Email', 'datse-multimedia-base' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'datse-multimedia-base' ) ?></div>
 						<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
                     </div><!-- #form-section-email .form-section -->
 	
                     <div id="form-section-url" class="form-section">
-						<div class="form-label"><label for="url"><?php _e( 'Website', 'thematic' ) ?></label></div>
+						<div class="form-label"><label for="url"><?php _e( 'Website', 'datse-multimedia-base' ) ?></label></div>
 						<div class="form-input"><input id="url" name="url" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
 	                </div><!-- #form-section-url .form-section -->
 	
 				<?php endif /* if ( $user_ID ) */ ?>
 	
 	            <div id="form-section-comment" class="form-section">
-					<div class="form-label"><label for="comment"><?php _e( thematic_commentbox_text(), 'thematic' ) ?></label></div>
+					<div class="form-label"><label for="comment"><?php _e( thematic_commentbox_text(), 'datse-multimedia-base' ) ?></label></div>
 	    			<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
 	            </div><!-- #form-section-comment .form-section -->
 	                            
