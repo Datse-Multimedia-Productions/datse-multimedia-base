@@ -107,6 +107,23 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Load widgets
 		require_once ( THEMATIC_LIB . '/extensions/widgets.php' );
 
+		// Add Custom Header Support
+		$defaults = array(
+			'default-image'          => get_template_directory_uri() . '/images/header.jpg',
+			'width'                  => 720,
+			'height'                 => 120,
+			'flex-height'            => true,
+			'flex-width'             => true,
+			'uploads'                => true,
+			'random-default'         => false,
+			'header-text'            => true,
+			'default-text-color'     => '',
+			'wp-head-callback'       => '',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => '',
+		);
+		add_theme_support( 'custom-header', $defaults );
+
 		// Load custom header extensions
 		require_once ( THEMATIC_LIB . '/extensions/header-extensions.php' );
 
@@ -154,7 +171,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
  			add_filter( 'the_generator', 'thematic_remove_generators' );
  
 		// Translate, if applicable
-		load_theme_textdomain( 'thematic', THEMATIC_LIB . '/languages' );
+		load_theme_textdomain( 'datse-multimedia-base', THEMATIC_LIB . '/languages' );
 
 		$locale = get_locale();
 		$locale_file = THEMATIC_LIB . "/languages/$locale.php";
