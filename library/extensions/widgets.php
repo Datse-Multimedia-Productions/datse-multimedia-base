@@ -52,6 +52,7 @@ function thematic_after_title() {
 class Thematic_Widget_Search extends WP_Widget {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	function __construct() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
 		parent::__construct('search', __('Search', 'thematic'), $widget_ops);
@@ -60,6 +61,11 @@ class Thematic_Widget_Search extends WP_Widget {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
 		$this->WP_Widget('search', __('Search', 'datse-multimedia-base'), $widget_ops);
 >>>>>>> release/0.1.10
+=======
+	function __construct() {
+		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
+		parent::__construct('search', __('Search', 'datse-multimedia-base'), $widget_ops);
+>>>>>>> d50ff9929b5bb11b4daa6659f835c0b8ab6dba72
 	}
 
 	function widget( $args, $instance ) {
@@ -103,6 +109,7 @@ class Thematic_Widget_Search extends WP_Widget {
 class Thematic_Widget_Meta extends WP_Widget {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	function __construct() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
 		parent::__construct('meta', __('Meta', 'thematic'), $widget_ops);
@@ -111,6 +118,11 @@ class Thematic_Widget_Meta extends WP_Widget {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'datse-multimedia-base') );
 		$this->WP_Widget('meta', __('Meta', 'datse-multimedia-base'), $widget_ops);
 >>>>>>> release/0.1.10
+=======
+	function __construct() {
+		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'datse-multimedia-base') );
+		parent::__construct('meta', __('Meta', 'datse-multimedia-base'), $widget_ops);
+>>>>>>> d50ff9929b5bb11b4daa6659f835c0b8ab6dba72
 	}
 
 	function widget( $args, $instance ) {
@@ -154,6 +166,7 @@ class Thematic_Widget_Meta extends WP_Widget {
 class Thematic_Widget_RSSlinks extends WP_Widget {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	function __construct() {
 		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'thematic') );
 		parent::__construct( 'rss-links', __('RSS Links', 'thematic'), $widget_ops);
@@ -162,6 +175,11 @@ class Thematic_Widget_RSSlinks extends WP_Widget {
 		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'datse-multimedia-base') );
 		$this->WP_Widget( 'rss-links', __('RSS Links', 'datse-multimedia-base'), $widget_ops);
 >>>>>>> release/0.1.10
+=======
+	function __construct() {
+		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'datse-multimedia-base') );
+		parent::__construct( 'rss-links', __('RSS Links', 'datse-multimedia-base'), $widget_ops);
+>>>>>>> d50ff9929b5bb11b4daa6659f835c0b8ab6dba72
 	}
 
 	function widget($args, $instance) {

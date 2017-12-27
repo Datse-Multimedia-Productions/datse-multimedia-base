@@ -21,8 +21,6 @@
 	// Create the meta content type
 	thematic_create_contenttype();
 	
-	// Create the title tag 
-	thematic_doctitle();
 	
 	// Create the meta description
 	thematic_show_description();
