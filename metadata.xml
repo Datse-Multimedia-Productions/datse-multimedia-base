@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<versions>
+    <version>
+        <id>current</id>
+        <name>Not Named</name>
+        <note>No Notes Yet</note>
+        <startDate>2015-08-19</startDate>
+        <releaseDate>NotSet</releaseDate>
+        <files>
+            <file>
+                <name>None</name>
+                <updates>
+                    <name>Not Yet</name>
+                    <note>None</note>
+                    <date>Not Yet</date>
+                </updates>
+            </file>
+        </files>
+    </version>
+</versions>  
