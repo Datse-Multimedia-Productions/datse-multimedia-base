@@ -110,12 +110,12 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Add Custom Header Support
 		$defaults = array(
 			'default-image'          => get_template_directory_uri() . '/images/header.jpg',
-			'width'                  => 720,
-			'height'                 => 120,
+			'width'                  => 940,
+			'height'                 => 200,
 			'flex-height'            => true,
 			'flex-width'             => true,
 			'uploads'                => true,
-			'random-default'         => false,
+			'random-default'         => true,
 			'header-text'            => true,
 			'default-text-color'     => '',
 			'wp-head-callback'       => '',
