@@ -130,6 +130,11 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 				'thumbnail_url' => get_template_directory_uri() . '/images/header-thumb.jpg',
 				'description' => 'header',
 			),
+			'header1' => array (
+                                'url' => get_template_directory_uri() . '/images/header1.jpg',
+                                'thumbnail_url' => get_template_directory_uri() . '/images/header1-thumb.jpg',
+                                'description' => 'header4',
+                        ),
 			'header2' => array (
                                 'url' => get_template_directory_uri() . '/images/header2.jpg',
                                 'thumbnail_url' => get_template_directory_uri() . '/images/header2-thumb.jpg',
@@ -139,11 +144,6 @@ if ( function_exists('childtheme_override_theme_setup') ) {
                                 'url' => get_template_directory_uri() . '/images/header3.jpg',
                                 'thumbnail_url' => get_template_directory_uri() . '/images/header3-thumb.jpg',
                                 'description' => 'header3',
-                        ),
-			'header4' => array (
-                                'url' => get_template_directory_uri() . '/images/header4.jpg',
-                                'thumbnail_url' => get_template_directory_uri() . '/images/header4-thumb.jpg',
-                                'description' => 'header4',
                         ),
 		);
 		register_default_headers( $header_images );
