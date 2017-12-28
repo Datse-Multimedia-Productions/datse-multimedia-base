@@ -54,6 +54,7 @@ class Thematic_Widget_Search extends WP_Widget {
 	function Thematic_Widget_Search() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
 		$this->WP_Widget('search', __('Search', 'datse-multimedia-base'), $widget_ops);
+	}
 
 	function __construct() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'datse-multimedia-base') );
