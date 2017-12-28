@@ -568,7 +568,13 @@ if ( function_exists( 'childtheme_override_blogtitle' ) )  {
     ?>
     
     	<div id="blog-title">
-		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+	<?php 
+		if (has_header_image()) { 
+	?>
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" class="header-image"/><br />
+	<?php	
+		} 
+	?>
 		<span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
     
     <?php 
