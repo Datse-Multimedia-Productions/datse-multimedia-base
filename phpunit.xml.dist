@@ -46,6 +46,10 @@
         <whitelist>
             <directory>.</directory>
         </whitelist>
+	<blacklist>
+	    <directory>vendor</directory>
+	    <directory>build</directory>
+	</blacklist>
     </filter>
 
     <logging>
