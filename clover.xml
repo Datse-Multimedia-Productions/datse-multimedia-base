@@ -1,0 +1,5 @@
+<!-- this one is counted as code coverage -->
+<line num="37" type="stmt" count="1"/>
+<!-- this one is not counted -->
+<line num="43" type="method" name="getCommandName" crap="1" count="1"/>
+
